@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+
+    <div class="mainBox">
+        <div id="header">To Do List</div>
+        <div id="body">
+            <div id="sideBar">
+               <!--<div id="addProject">
+
+                <label for="newProject"><input required id ="newProject" type="text" placeholder="New Project"></label>
+                <button id="submitProject">+</button>
+
+               </div> -->
+            </div>
+
+            <div id="mainList">
+               <button id="addItem">+</button>
+
+               <dialog class="modal" id="modal">   <!--Modal to get the todo item-->
+
+                <h1>New ToDo Item</h1>
+
+                <form class="form" method="dialog">
+                  <label for="title">New Task: <input required id ="title" type="text"></label>
+
+                  <label for="description">Description: <br>
+                    <textarea id="description" rows="8" cols="40" placeholder="Notes"></textarea></label>
+
+                  <label for="dueDate">Due Date: <input required id="dueDate" type="date"></label>
+                  
+                  <label for="priority">
+                    Task Priority:
+                    <select required class="select" id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                  </label>
+
+                  <button class="button" type="submit">Add Item</button>
+                </form>
+              
+               </dialog>
+
+
+               <dialog class="editModal" id="editModal">   <!--Popup Modal when user needs to edit a todo item-->
+
+                <h1>Edit Todo Item</h1>
+
+                <form class="editForm" method="dialog">
+                  <label for="newTitle">New Task: <input id ="newTitle" type="text"></label>
+
+                  <label for="newDueDate">Due Date: <input id="newDueDate" type="date"></label>
+                  
+                  <label for="newPriority">
+                    Task Priority:
+                    <select class="selectNew" id="newPriority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                  </label>
+
+                  <button class="doneButton" type="submit">Done</button>
+                </form>
+              
+               </dialog>
+
+               <div id="todoCards">
+                   
+               </div>
+        </div>
+    </div>
+    </div>
+    <script defer src="bundle.js"></script>
+</body>
+</html>
